@@ -5,12 +5,12 @@ import { ReactComponent as TodoSvg } from './todosvg.svg'
 
 function Dashboard({ user }) {
     return (
-        <Stack direction={(user) ? "column" : ["column", "row"]} mt={16} pl={[0, 4, 16]}>
-            <VStack p={[12, 12, 16]} color="white" justify="center"><Heading fontFamily="Gluten" fontSize={["40", "40", "50"]}>TO - DO LIST</Heading>
-                <Text>All your task at one place</Text></VStack>
+        <Stack direction={(user) ? "column" : ["column", "row"]} mt={16} justify="center" p={8} spacing="8" >
+            <VStack color="white" justify="center" textAlign="center"><Heading fontFamily="Gluten" fontSize={["40", "50", "60"]}>TO - DO LIST</Heading>
+                <Text>All your task at one place </Text></VStack>
             {(user) ? <Text color="white" textAlign="center" fontFamily="Gluten" m={8}>Hello <i>{user.email} </i>, Add your tasks</Text> : ""}
             {(!user) ?
-                <Flex justify="center"><TodoSvg height="100%" style={{ margin: "8px" }} /></Flex> : <Todos user={user} />}
+                <Flex justify="center"><TodoSvg height="100%" /></Flex> : <Todos user={user} />}
         </Stack>
     )
 }
