@@ -1,3 +1,7 @@
+# To - Do List with Authentication
+* implemented CRUD feature using react
+* implemented authentication using firebase
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
